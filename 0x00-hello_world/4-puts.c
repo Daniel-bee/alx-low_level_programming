@@ -1,6 +1,5 @@
-/** * program c */
-#include<stdio.h>
 /** * main function */
+#include<stdio.h>
 int main(void)
 {
 /** * puts function diplay string */
