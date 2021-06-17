@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-char hello[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+char hello[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 char *s;
 int out;
 s = hello;
