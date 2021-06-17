@@ -1,11 +1,6 @@
 #include<stdio.h>
 /**
  * main - start here
- * @intType: int type
- * @longIntType: long int type
- * @longLongIntType: long long type
- * @floatType: float type
- * @charType: char type
  * printf - Prints "Size"
  * return - return zero
  * Return: 0
