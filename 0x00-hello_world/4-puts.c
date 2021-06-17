@@ -1,5 +1,8 @@
 #include<stdio.h>
-int main(void)/* main function */
+/**
+ *main function 
+*/
+int main(void)
 {
 /* puts function diplay string */
 puts("\"Programming is like building a multilingual puzzle");
