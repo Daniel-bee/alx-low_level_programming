@@ -1,9 +1,6 @@
 #include<stdio.h>
 /**
  * main - start here
- * @hello[]: Initalize array of char
- * @*s: Pointer
- * @out : hold the result
  * return - return 1
  * Return: 1
  */
