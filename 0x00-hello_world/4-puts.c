@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - return 0
+ * main - main start here
 */
 int main(void)
 {
@@ -9,6 +9,7 @@ int main(void)
  */
 puts("\"Programming is like building a multilingual puzzle");
 /**
+ * return - return 0
  * Return: 0
 */
 return (0);
