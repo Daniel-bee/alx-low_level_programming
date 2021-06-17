@@ -1,5 +1,4 @@
 #include<stdio.h>
-/** *main function */
 int main(void)
 {
 /** * puts function diplay string */
