@@ -1,5 +1,7 @@
 #include<stdio.h>
-/** * Description: main function */
+/** 
+ * main function - Short description 
+*/
 int main(void)
 {
 /** * puts function diplay string */
