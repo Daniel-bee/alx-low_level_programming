@@ -1,4 +1,3 @@
-/*This program use puts function to display string on the screen. */
 #include<stdio.h>
 /* This is main function */
 int main(void)
