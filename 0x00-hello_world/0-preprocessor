@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$CFILE=0-main.c" > c
+echo "$CFILE=main.c" >> c
