@@ -1,2 +1,2 @@
 #!/bin/bash
-$CFILE = #include<stdio.h> ; echo "#CFILE" > c
+$CFILE = main.c ; echo "#CFILE" > c
