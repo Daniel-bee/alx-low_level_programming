@@ -1,9 +1,9 @@
 /**
- * This program use puts function to display string on the screen.
+ *This program use puts function to display string on the screen.
 */
 #include<stdio.h>
 /**
- * This is main function
+ *This is main function
 */
 int main(void)
 {
@@ -12,7 +12,7 @@ int main(void)
 */
 puts("\"Programming is like building a multilingual puzzle");
 /**
- * return function
+ *return function
 */
 return (0);
 }
