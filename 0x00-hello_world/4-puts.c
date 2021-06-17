@@ -1,5 +1,5 @@
 /**
- * main function 
+ * main function
 */ 
 #include<stdio.h>
 int main(void)
