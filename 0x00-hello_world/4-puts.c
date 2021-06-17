@@ -1,4 +1,9 @@
 #include<stdio.h>
+/**
+ * main function
+ * has a puts function
+ * return
+*/
 int main(void)
 {
 /** * puts function diplay string */
