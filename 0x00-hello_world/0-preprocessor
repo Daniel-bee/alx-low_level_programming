@@ -1,2 +1,2 @@
 #!/bin/bash
-$CFILE=main.c; gcc 0-preprocessor -o  c
+$CFILE=main.c; echo "$CFILE" > c
