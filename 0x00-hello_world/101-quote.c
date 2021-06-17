@@ -16,7 +16,7 @@ s = hello;
 while(*s != '\0' )
 {
 out = putchar(*s);
-if(out == EOF || ferror(stdout) )
+if (out == EOF || ferror(stdout))
 {
 puts("\nFile error");
 clearerr(stdout);
