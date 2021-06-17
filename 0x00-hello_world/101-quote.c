@@ -24,5 +24,5 @@ return(1);
 s++;
 }
 
-return();
+return(1);
 }
