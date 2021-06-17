@@ -1,2 +1,2 @@
 #!/bin/bash
-$CFILE = main.c ; echo "#CFILE" > c
+gcc $CFILE -o  c
