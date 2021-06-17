@@ -1,13 +1,9 @@
 #include<stdio.h>
-/**
-*main function
-*/
+/** * main function */
 int main(void)
 {
-/* puts function diplay string */
+/** * puts function diplay string */
 puts("\"Programming is like building a multilingual puzzle");
-/**
-*return function of main
-*/
+/** * return function of main */
 return (0);
 }
