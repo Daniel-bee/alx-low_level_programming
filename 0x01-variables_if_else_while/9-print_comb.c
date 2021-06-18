@@ -13,9 +13,10 @@ int main(void)
 	if (n < '9')
 	{
 	putchar(44);
-	}
 	putchar(' ');
+	}
 	n++;
 	}
+	putchar(36);
 	return (0);
 }
