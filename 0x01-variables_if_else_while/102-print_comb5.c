@@ -1,34 +1,24 @@
 #include <stdio.h>
 /**
- * main - start here
- * Return: zero
+* main - start here
+* Return: zero
 */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	int j, i;
 
-	for (a = 48; a <= 57; a++)
+	for (j = 0; j <= 99; j++)
 	{
-
-	for (b = 48; b < 57; b++)
+	for (i = j; i <= 99; i++)
 	{
-	for (c = 48; c <= 57; c++)
+	if (i != j)
 	{
-	for (d = 48 + 1; d <= 57; d++)
-	{
-	putchar(a);
-	putchar(b);
+	putchar(j / 10 + 48);
+	putchar(j % 10 + 48);
 	putchar(' ');
-	putchar(c);
-	putchar(d);
-	if ((a == 57 && b == 56) && (c == 57 && d == 57))
-	{
-	putchar('\n');
-	}
-	else
+	putchar(i / 10 + 48);
+	putchar(i % 10 + 48);
+	if (j * 100 + i != 9899)
 	{
 	putchar(44);
 	putchar(' ');
@@ -36,6 +26,6 @@ int main(void)
 	}
 	}
 	}
-	}
+	putchar('\n');
 	return (0);
 }
