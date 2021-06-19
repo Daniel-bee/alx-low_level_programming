@@ -24,12 +24,18 @@ int main(void)
 	putchar(' ');
 	putchar(c);
 	putchar(d);
+	if ((a == 57 && b == 56) && (c == 57 && d == 57))
+	{
+	putchar('\n');
+	}
+	else
+	{
 	putchar(44);
 	putchar(' ');
 	}
 	}
 	}
 	}
-	putchar('\n');
+	}
 	return (0);
 }
