@@ -1,31 +1,31 @@
 #include <stdio.h>
 /**
 * main - start here
-* Return: zero
+* Return: Returns zero when main dunction ends
 */
 int main(void)
 {
-	int j, i;
+	int n, m;
 
-	for (j = 0; j <= 99; j++)
+	for (n = 0; n < 99; n++)
 	{
-	for (i = j; i <= 99; i++)
-	{
-	if (i != j)
-	{
-	putchar(j / 10 + 48);
-	putchar(j % 10 + 48);
-	putchar(' ');
-	putchar(i / 10 + 48);
-	putchar(i % 10 + 48);
-	if (j * 100 + i != 9899)
-	{
-	putchar(44);
-	putchar(' ');
+		for (m = 1; m <= 99; m++)
+		{
+			putchar(n / 10 + '0');
+			putchar(n % 10 + '0');
+			putchar(' ');
+			putchar(m / 10 + '0');
+			putchar(m % 10 + '0');
+			if (m == 99 && n == 98)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(44);
+				putchar(' ');
+			}
+		}
 	}
-	}
-	}
-	}
-	putchar('\n');
 	return (0);
 }
