@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  *print_to_98- print 98
