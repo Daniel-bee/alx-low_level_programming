@@ -11,17 +11,26 @@ int i;
 
 	if (n <= 98)
 	{
-		for (i = n; i < 98; i++)
+		for (i = n; i <= 98; i++)
 		{
-			printf("%i, ", i);
-		}
-	} else
-	{
-		for (i = n; i > 98; i--)
-		{
-			printf("%i, ", i);
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
-	printf("\n");
+	else
+	{
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	printf("\n")
 
 }
