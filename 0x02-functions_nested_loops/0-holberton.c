@@ -4,6 +4,7 @@
  * @c: The character to print
  *Return: return string characters
 */
+int _putchar(char);
 /**
  *main - count characters and print as string result
  *Return: zero
