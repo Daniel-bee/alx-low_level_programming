@@ -9,16 +9,7 @@ int _putchar(char c);
  *print_alphabet - writes the lower alphabet c to stdout
  *Return: return string characters
 */
-void print_alphabet(void)
-{
-	int c;
-
-	for (c = 97; c <= 122; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
-}
+void print_alphabet(void);
 /**
  *main - count characters and print as string result
  *Return: void
