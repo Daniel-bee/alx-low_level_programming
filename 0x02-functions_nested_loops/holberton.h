@@ -4,11 +4,11 @@ int _putchar(char c)
 }
 void print_alphabet(void)
 {
-	int c;
+	int d;
 
-	for (c = 97; c <= 122; c++)
+	for (d = 97; d <= 122; d++)
 	{
-		_putchar(c);
+		_putchar(d);
 	}
 	_putchar('\n');
 }
