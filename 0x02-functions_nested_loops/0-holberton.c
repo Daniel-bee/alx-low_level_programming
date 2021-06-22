@@ -1,8 +1,17 @@
-#include "holberton.h"
+#include <holberton.h>
 /**
-*main- start here
-*Return: zreo
+ *_putchar - writes the character c to stdout
+ * @c: The character to print
+ *Return: return string characters
 */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
+ *main - count characters and print as string result
+ *Return: zero
+ */
 int main(void)
 {
 	char *c = "Holberton";
@@ -16,7 +25,5 @@ int main(void)
 	{
 		_putchar(c[d]);
 	}
-	_putchar('\n');
 	return (0);
 }
-
