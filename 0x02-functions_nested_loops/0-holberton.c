@@ -4,7 +4,7 @@
  * @c: The character to print
  *Return: return string characters
 */
-int _putchar(char);
+int _putchar(char c);
 /**
  *main - count characters and print as string result
  *Return: zero
@@ -22,5 +22,6 @@ int main(void)
 	{
 		_putchar(c[d]);
 	}
+	_putchar('\n');
 	return (0);
 }
