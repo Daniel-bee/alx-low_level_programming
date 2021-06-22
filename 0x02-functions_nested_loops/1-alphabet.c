@@ -18,6 +18,7 @@ void print_alphabet(void)
 		_putchar(c);
 	}
 	_putchar('\n');
+	return;
 }
 /**
  *main - count characters and print as string result
