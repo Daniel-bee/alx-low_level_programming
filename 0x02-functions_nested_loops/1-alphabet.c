@@ -21,11 +21,3 @@ void print_alphabet(void)
 	return;
 }
 /**
- *main - count characters and print as string result
- *Return: void
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
