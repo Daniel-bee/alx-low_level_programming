@@ -5,19 +5,28 @@
 *@n: is an intger
 *@val: pro
 */
-void space(int n, int val)
+void space(int val)
 {
-	if (n <=9)
+	if (val <= 9)
 	{
-		printf("%5d", val);
+		 _putchar(' ');
+	     _putchar(' ');
+	     _putchar(' ');
+		printf("%d", val);
+		
 	}
-	else if (n > 9 && n <= 99)
+	else if (val > 9 && val <= 99)
 	{
-		printf("%3d", val);
+        _putchar(' ');
+        _putchar(' ');
+		printf("%d", val);
+
 	}
-	else if (n > 99)
+	else if (val > 99)
 	{
-		printf("%2d", val);
+		_putchar(' ');
+		printf("%d", val);
+
 	}
 }
 void print_times_table(int n)
@@ -32,18 +41,18 @@ void print_times_table(int n)
 			if(pro == 0)
 			{
 				if (i == 0 && j >= 1)
-					space(n, pro);
+					space(pro);
 				else
 					printf("%d", pro);
 			}
 			else
 			{
-				space(n, pro);
+				space(pro);
 			}
 			if (j < n)
 				printf(",");
 			else
-				_putchar('\n');
+				printf("\n");
 		}
 	}
 }
