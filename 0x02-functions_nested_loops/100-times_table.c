@@ -1,9 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
-*print_times_table- compute time table
+* print_times_table - compute time table
 *@n: is an intger
-*@val: pro
 */
 void print_times_table(int n)
 {
