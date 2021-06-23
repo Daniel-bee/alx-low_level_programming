@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
 *print_times_table- compute time table
+*@n: accept an integer
 */
 void print_times_table(int n)
 {
