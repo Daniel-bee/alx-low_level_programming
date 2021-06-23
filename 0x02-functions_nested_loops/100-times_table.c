@@ -5,56 +5,44 @@
 *@n: is an intger
 *@val: pro
 */
-void space(int val)
-{
-
-	if (val <= 9)
-	{
-		_putchar(' ');
-	    _putchar(' ');
-	    _putchar(' ');
-		printf("%d", val);
-		
-	}
-	else if (val > 9 && val <= 99)
-	{
-        _putchar(' ');
-        _putchar(' ');
-		printf("%d", val);
-
-	}
-	else if (val > 99)
-	{
-		_putchar(' ');
-		printf("%d", val);
-
-	}
-
-}
 void print_times_table(int n)
 {
-	int i, j, pro;
+	int i, j, res;
 
-	for (i = 0; i <= n; i++)
+	if (!(n > 15 || n < 0))
 	{
-		for (j = 0; j <= n; j++)
+		for (i = 0; i <= n; i++)
 		{
-			pro = i * j;
-			if(pro == 0)
+			for (j = 0; j <= n; j++)
 			{
-				if (i == 0 && j >= 1)
-					space(pro);
+				res = (i * j);
+				if (j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				if (res < 10 && j != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 10 && res < 100)
+				{
+					_putchar(' ');
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 100 && j != 0)
+				{
+					_putchar((res / 100) + '0');
+					_putchar((res / 10) % 10 + '0');
+					_putchar((res % 10) + '0');
+				}
 				else
-					printf("%d", pro);
+					_putchar((res % 10) + '0');
 			}
-			else
-			{
-				space(pro);
-			}
-			if (j < n)
-				_putchar(44);
-			else
-				_putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
