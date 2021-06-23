@@ -20,7 +20,7 @@ int main(void)
 		printf("%lu", sum);
 		if (i  <= 50)
 			printf(", ");
-	        }
+		}
 	}
 	printf("\n");
 	return (0);
