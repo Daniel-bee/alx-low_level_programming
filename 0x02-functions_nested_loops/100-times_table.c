@@ -2,8 +2,24 @@
 #include <stdio.h>
 /**
 *print_times_table- compute time table
-*@n: accept an integer
+*@n: is an intger
+*@val: pro
 */
+void space(int n, int val)
+{
+	if (n <=9)
+	{
+		printf("%5d", val);
+	}
+	else if (n > 9 && n <= 99)
+	{
+		printf("%3d", val);
+	}
+	else if (n > 99)
+	{
+		printf("%2d", val);
+	}
+}
 void print_times_table(int n)
 {
 	int i, j, pro;
@@ -13,25 +29,21 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			pro = i * j;
-			if (pro == 0)
+			if(pro == 0)
 			{
 				if (i == 0 && j >= 1)
-					printf("%3d", pro);
+					space(n, pro);
 				else
 					printf("%d", pro);
 			}
 			else
 			{
-				printf("%3d", pro);
-				_putchar('\n');
+				space(n, pro);
 			}
 			if (j < n)
 				printf(",");
 			else
 				_putchar('\n');
 		}
-		_putchar('\n');
 	}
-
-	
 }
