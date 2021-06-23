@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-*sum - sum of multiple of 3 and 5
+*main - sum of multiple of 3 and 5
 *Return: sum
 */
 int main(void)
@@ -13,5 +13,6 @@ int main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum += i;
 	}
+	printf("\n");
 	return (sum);
 }
