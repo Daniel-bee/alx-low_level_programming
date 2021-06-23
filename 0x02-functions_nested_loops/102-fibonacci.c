@@ -15,7 +15,7 @@ int main(void)
 		sum = x1 + x2;
 		x1 = x2;
 		x2 = sum;
-		printf("%lld ", sum);
+		printf("%llu ", sum);
 		if (i  < 58)
 			printf(", ");
 	}
