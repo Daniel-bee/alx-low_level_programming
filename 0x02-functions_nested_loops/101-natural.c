@@ -13,6 +13,6 @@ int main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum += i;
 	}
-	printf("\n");
+	_putchar('\n');
 	return (sum);
 }
