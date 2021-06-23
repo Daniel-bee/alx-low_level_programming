@@ -15,9 +15,12 @@ int main(void)
 		sum = x1 + x2;
 		x1 = x2;
 		x2 = sum;
+		if (sum <= 20365011074)
+		{
 		printf("%lu ", sum);
-		if (i  < 58)
+		if (i  < 50)
 			printf(", ");
+	        }
 	}
 	printf("\n");
 	return (0);
