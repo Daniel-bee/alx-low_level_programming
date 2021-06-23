@@ -7,12 +7,8 @@
 */
 void space(int val)
 {
-	if (val < 10)
-	{
-		_putchar(' ');
-		printf("%d", val);
-	}
-	else if (val <= 9 && val <= 99)
+
+	if (val <= 9)
 	{
 		_putchar(' ');
 	    _putchar(' ');
@@ -33,6 +29,7 @@ void space(int val)
 		printf("%d", val);
 
 	}
+
 }
 void print_times_table(int n)
 {
@@ -55,9 +52,9 @@ void print_times_table(int n)
 				space(pro);
 			}
 			if (j < n)
-				printf(",");
+				_putchar(44);
 			else
-				printf("\n");
+				_putchar('\n');
 		}
 	}
 }
