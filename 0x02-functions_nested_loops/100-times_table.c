@@ -7,12 +7,17 @@
 */
 void space(int val)
 {
-	if (val <= 9 && val <= 99 )
+	if (val < 10)
 	{
-	     _putchar(' ');
-	     _putchar(' ');
-	     _putchar(' ');
-	     printf("%d", val);
+		_putchar(' ');
+		printf("%d", val);
+	}
+	else if (val <= 9 && val <= 99)
+	{
+		_putchar(' ');
+	    _putchar(' ');
+	    _putchar(' ');
+		printf("%d", val);
 		
 	}
 	else if (val > 9 && val <= 99)
