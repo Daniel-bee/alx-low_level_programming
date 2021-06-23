@@ -15,7 +15,8 @@ int main(void)
 		sum = x1 + x2;
 		x1 = x2;
 		x2 = sum;
+		printf("%d, ", x2);
 	}
-	printf("%d\n", sum);
+	printf("\n");
 	return (0);
 }
