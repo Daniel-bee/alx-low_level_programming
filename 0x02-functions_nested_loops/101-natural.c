@@ -3,7 +3,7 @@
 *sum - sum of multiple of 3 and 5
 *Return: sum
 */
-int sum(void)
+int main(void)
 {
 	int sum = 0;
 	int i;
