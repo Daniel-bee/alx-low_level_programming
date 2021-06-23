@@ -1,21 +1,23 @@
 #include <stdio.h>
 /**
-* main- Fibonacci numbers
-* Return: zero
+*main - Fibonacci numbers
+*Return: zero
 */
 int main(void)
 {
-	int x1 = 0;
-	int x2 = 1;
+	unsigned long long int x1 = 0;
+	unsigned long long int x2 = 1;
 	int i;
-	int sum = 0;
+	unsigned long long int sum = 0;
 
-	for (i = 2; i <= 50; i++)
+	for (i = 2; i < 59; i++)
 	{
 		sum = x1 + x2;
 		x1 = x2;
 		x2 = sum;
-		printf("%d, ", x2);
+		printf("%lld ", sum);
+		if (i  < 58)
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
