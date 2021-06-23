@@ -15,13 +15,13 @@ void print_times_table(int n)
 			if (pro == 0)
 			{
 				if (i == 0 && j >= 1)
-					printf("%5d", pro);
+					printf("%3d", pro);
 				else
 					printf("%d", pro);
 			}
 			else
 			{
-				printf("%5d", pro);
+				printf("%3d", pro);
 			}
 			if (j < n)
 				printf(",");
