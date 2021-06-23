@@ -17,7 +17,7 @@ int main(void)
 		x2 = sum;
 		if (sum <= 20365011074)
 		{
-		printf("%lu ", sum);
+		printf("%lu", sum);
 		if (i  <= 50)
 			printf(", ");
 	        }
