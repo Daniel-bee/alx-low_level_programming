@@ -1,22 +1,15 @@
 #include "holberton.h"
 /**
- * more_numbers - prints 0 - 14 ten times
+ * print_numbers - prints 0 - 9 numbers but not 2 and 5
 */
-void more_numbers(void)
+void print_numbers(void)
 {
-	int i, j;
+	int num;
 
-	for (i = 0; i < 10; i++)
+	for (num = 48; num <= 57; num++)
 	{
-		for (j = 0; j <= 14; j++)
-		{
-			if (j <= 9)
-				_putchar(j / 10 + '0');
-			else
-				_putchar(j / 10 + '0');
-				_putchar(j % 10 + '0');
-		}
-		_putchar('\n');
+		if (num != 50 && num != 52)
+			_putchar(num);
 	}
 	_putchar('\n');
 }
