@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_numbers - prints 0 - 9 numbers but not 2 and 5
+ *print_numbers - prints 0 - 9 numbers but not 2 and 5
 */
 void print_numbers(void)
 {
