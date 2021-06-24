@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-	long long int n;
+	unsigned long int n;
 
 	n = 612852475143;
 	long int div = 2, ans = 0, maxFact;
@@ -20,7 +20,7 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%lld \n", maxFact);
+				printf("%ld \n", maxFact);
 				ans = 1;
 				break;
 			}
