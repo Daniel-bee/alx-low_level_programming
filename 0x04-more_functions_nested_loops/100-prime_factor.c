@@ -5,10 +5,10 @@
 */
 int main(void)
 {
-	 int n;
+	unsigned long long int n;
 
 	n = 612852475143;
-        int div = 2, ans = 0, maxFact;
+	int div = 2, ans = 0, maxFact;
 
 	while (n != 0)
 	{
@@ -20,7 +20,7 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%ld \n", maxFact);
+				printf("%d \n", maxFact);
 				ans = 1;
 				break;
 			}
