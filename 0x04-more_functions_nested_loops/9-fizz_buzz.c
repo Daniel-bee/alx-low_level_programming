@@ -12,7 +12,10 @@ int main(void)
 
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			if (i <= 99)
+				printf("FizzBuzz ");
+			else
+				printf("FizzBuzz");		
 		}
 		else
 		{
