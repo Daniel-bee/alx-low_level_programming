@@ -4,22 +4,24 @@
 */
 void more_numbers(void)
 {
-	int i, j;
+	char i, j, l, k;
 
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j <= 14; j++)
 		{
-			if (j <= 9)
+			if (j < 10)
 			{
-				_putchar(j % 10 + '0');
+				l = j;
 			}
 			else
 			{
-				_putchar(j / 10 + '0');
-				_putchar(j % 10 + '0');
+				l = j % 10;
+				k = j / 10;
+				_putchar(k + '0');
 			}
+			_putchar(l + '0');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
