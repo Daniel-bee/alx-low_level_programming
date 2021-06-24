@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - prints square
- * Retuen: zero
+ *main - prints square
+ *Return: zero
 */
 int main(void)
 {
@@ -15,7 +15,7 @@ int main(void)
 			if (i <= 99)
 				printf("FizzBuzz ");
 			else
-				printf("FizzBuzz");		
+				printf("FizzBuzz");
 		}
 		else
 		{
