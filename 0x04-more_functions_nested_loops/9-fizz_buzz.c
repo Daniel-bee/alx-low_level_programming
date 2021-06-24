@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "holberton.h"
 /**
  * main - prints square
- * Retuen: zero
+ * Return: zero
 */
 int main(void)
 {
@@ -15,7 +16,7 @@ int main(void)
 			if (i <= 99)
 			printf("FizzBuzz ");
 			else
-			printf("FizzBuzz");		
+			printf("FizzBuzz");
 		}
 		else
 		{
