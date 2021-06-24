@@ -8,7 +8,7 @@ int main(void)
 	unsigned long int n;
 
 	n = 612852475143;
-	long int div = 2, ans = 0, maxFact;
+	unsigned long int div = 2, ans = 0, maxFact;
 
 	while (n != 0)
 	{
