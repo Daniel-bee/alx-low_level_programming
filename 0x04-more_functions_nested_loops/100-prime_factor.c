@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-	unsigned long long int n;
+	unsigned long int n;
 
 	n = 612852475143;
 	int div = 2, ans = 0, maxFact;
