@@ -5,8 +5,8 @@
 */
 int main(void)
 {
-	unsigned long  int n = 612852475143;
-	unsigned long int div = 2, ans = 0, maxFact;
+	int n = 612852475143;
+	int div = 2, ans = 0, maxFact;
 
 	while (n != 0)
 	{
