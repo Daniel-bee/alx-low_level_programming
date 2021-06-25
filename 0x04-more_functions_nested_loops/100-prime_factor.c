@@ -1,28 +1,57 @@
 #include <stdio.h>
+
 /**
-* main - max prime number
-* Return: 0
-*/
+ * main - largetst prime number
+ * Return: Zero
+ */
 int main(void)
 {
-	int n = 612852475143;
-	int div = 2, ans = 0, maxFact;
+	int i = 2;
+	long n = 612852475143;
 
-	while (n != 0)
+
+	while (i < n)
 	{
-		if (n % div != 0)
-			div = div + 1;
-		else
+		while (n % i == 0)
 		{
-			maxFact = n;
-			n = n / div;
-			if (n == 1)
+			if (n == i)
 			{
-				printf("%lu\n", maxFact);
-				ans = 1;
 				break;
 			}
+			n /= i;
 		}
+		i++;
+
+
 	}
+
+	printf("%lu\n", n);
 	return (0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			}
+
+
+
+
