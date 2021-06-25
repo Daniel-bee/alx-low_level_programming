@@ -6,23 +6,20 @@
  */
 int main(void)
 {
-int n = 612852475143, a = (int) sqrt(n);
+unsigned long int prime = 612852475143;
+	unsigned long int i = 3;
 
-while (1)
-{
+	while (i <= prime / 2)
+		if (prime % i == 0)
+			prime = prime / i;
+		else
+			i += 2;
 
-	if (n % a == 0)
-	{
-		printf("%lu \n", n / a);
-		break;
-	}
-	a--;
+	printf("%ld\n", prime);
 
-}
-
-	printf("%ld\n", max);
 	return (0);
 }
+
 
 
 
