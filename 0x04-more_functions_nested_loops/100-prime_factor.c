@@ -6,25 +6,13 @@
  */
 int main(void)
 {
-	int i = 2;
-	long n = 612852475143;
+	int i, n = 612852475143;
 
-
-	while (i < n)
+	for (i = 3; i < 782849; i = i + 2)
 	{
-		while (n % i == 0)
-		{
-			if (n == i)
-			{
-				break;
-			}
-			n /= i;
-		}
-		i++;
-
-
+		while ((n % i == 0) && (n != i))
+			n = n / i;
 	}
-
 	printf("%lu\n", n);
 	return (0);
 }
