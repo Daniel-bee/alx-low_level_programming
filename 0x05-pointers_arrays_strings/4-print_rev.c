@@ -15,7 +15,7 @@ int _strlen(char *s)
 	return (len);
 }
 /**
- * _strlen - print string in revers order
+ * print_rev - print string in revers order
  * @s: characters pointer
  */
 void print_rev(char *s)
