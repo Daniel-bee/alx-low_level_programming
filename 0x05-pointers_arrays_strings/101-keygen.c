@@ -1,49 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
-
-int rand_lim(int limit) {
-/* return a random number between 0 and limit inclusive.*/
-
-    int divisor = RAND_MAX/(limit+1);
-    int retval;
-
-    do { 
-        retval = rand() / divisor;
-    } while (retval > limit);
-
-    return retval;
-}
-
-char picker(const char *charset) {
-    return charset[rand_lim(strlen(charset)-1)];
-}
-
-int main(int argc, char *argv[])
+int main(void)
 {
-    if (argc != 2) {
-        puts("Usage: pwgen len");
-        return 1;
-    }
-    int len = atoi(argv[1]);
-    if (len <= 0) {
-       puts("Length must be a positive non-zero integer"); 
-       return 2;
-    }
-    const char* groups[] = {
-        "1234567890",  
-        "abcdefghijklmnoqprstuvwyz",
-        "ABCDEFGHIJKLMNOQPRSTUYWVZX",  
-        "!@#$%^&*(){}[]:<>?,./",    
-    };
-    const size_t numGroups = sizeof(groups)/sizeof(groups[0]);
-    srand((unsigned int)(time(NULL)));
+	int pass[100];
+	int i, sum, n;
 
-  
-    for ( ; len; --len) {
-        unsigned group = rand_lim(numGroups-1);
-        putchar(picker(groups[group]));
-    }
-    putchar('\n');
+	sum = 0;	
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }
