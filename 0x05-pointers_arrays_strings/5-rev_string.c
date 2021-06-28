@@ -24,11 +24,11 @@ void rev_string(char *s)
 	char *l = &s[0];
 	char *r = &s[len];
 
-	while (len >= 0)
+	while (l < r)
 	{
-		*s = *l;
+		s = *l;
 		*l = *r;
-		*r = *s;
+		*r = s;
 		l++;
 		r--;
 	}
