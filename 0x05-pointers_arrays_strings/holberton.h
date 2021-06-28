@@ -9,3 +9,4 @@ void print_rev(char *s);
 void print_rev(char *s);
 void print_rev(char *s);
 void print_rev(char *s);
+int _atoi(char *s);
