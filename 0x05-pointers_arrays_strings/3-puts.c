@@ -1,4 +1,8 @@
 #include "holberton.h"
+/**
+  * _puts - print string
+  * @str: char string
+  */
 void _puts(char *str)
 {
 	int i = 0;
