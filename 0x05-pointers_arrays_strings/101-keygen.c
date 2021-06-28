@@ -1,78 +1,49 @@
-/** C program for the above approach */
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-  
-/** Function to randomly generates password */
-/** of length N */
-void randomPasswordGeneration(int N)
-{
-    /** Initialize counter */
-    int i = 0;
-  
-    int randomizer = 0;
-  
-    /** Seed the random-number generator */
-    /** with current time so that the */
-    /** numbers will be different every time */
-    srand((unsigned int)(time(NULL)));
-  
-    /** Array of numbers */
-    char numbers[]; 
-    numbers = "0123456789";
-  
-    /** Array of small alphabets */
-    char letter[] = "abcdefghijklmnoqprstuvwyzx";
-  
-    /** Array of capital alphabets */
-    char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-  
-    /** Array of all the special symbols */
-    char symbols[] = "!@#$^&*?";
-  
-    /** Stores the random password */
-    char password[N];
-  
-    /** To select the randomizer */
-    /** inside the loop */
-    randomizer = rand() % 4;
-  
-    /** Iterate over the range [0, N] */
-    for (i = 0; i < N; i++) {
-  
-        if (randomizer == 1) {
-            password[i] = numbers[rand() % 10];
-            randomizer = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else if (randomizer == 2) {
-            password[i] = symbols[rand() % 8];
-            randomizer = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else if (randomizer == 3) {
-            password[i] = LETTER[rand() % 26];
-            randomizer = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else {
-            password[i] = letter[rand() % 26];
-            randomizer = rand() % 4;
-            printf("%c", password[i]);
-        }
-    }
+#include <string.h>
+
+int rand_lim(int limit) {
+/* return a random number between 0 and limit inclusive.*/
+
+    int divisor = RAND_MAX/(limit+1);
+    int retval;
+
+    do { 
+        retval = rand() / divisor;
+    } while (retval > limit);
+
+    return retval;
 }
-  
-/* Driver Code */
-int main()
+
+char picker(const char *charset) {
+    return charset[rand_lim(strlen(charset)-1)];
+}
+
+int main(int argc, char *argv[])
 {
-    /* Length of the password to */
-    /* be generated */
-    int N = 10;
+    if (argc != 2) {
+        puts("Usage: pwgen len");
+        return 1;
+    }
+    int len = atoi(argv[1]);
+    if (len <= 0) {
+       puts("Length must be a positive non-zero integer"); 
+       return 2;
+    }
+    const char* groups[] = {
+        "1234567890",  
+        "abcdefghijklmnoqprstuvwyz",
+        "ABCDEFGHIJKLMNOQPRSTUYWVZX",  
+        "!@#$%^&*(){}[]:<>?,./",    
+    };
+    const size_t numGroups = sizeof(groups)/sizeof(groups[0]);
+    srand((unsigned int)(time(NULL)));
+
   
-    /* Function Call */
-    randomPasswordGeneration(N);
-  
-    return 0;
+    for ( ; len; --len) {
+        unsigned group = rand_lim(numGroups-1);
+        putchar(picker(groups[group]));
+    }
+    putchar('\n');
 }
