@@ -6,7 +6,8 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, result = 0, sign = 1, c;
+	int i = 0, sign = 1, c;
+	unsigned int result;
 
 	while (s[i] != '\0')
 	{
@@ -20,8 +21,5 @@ int _atoi(char *s)
 		i++;
 	}
 	result *= sign;
-	if (result > 2147483647)
-		return (-2147483648);
-	else
-		return (result);
+	return (result);
 }
