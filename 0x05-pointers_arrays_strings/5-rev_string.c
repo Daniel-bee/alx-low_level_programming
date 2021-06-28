@@ -20,17 +20,15 @@ int _strlen(char *c)
  */
 void rev_string(char *s)
 {
-	int len = _strlen(s) - 1;
-	char *l = &s[0];
-	char *r = &s[len];
+	int len = _strlen(s) - 1, i = 0;
+	char t;
 
-	while (l < r)
+	while (i <= len)
 	{
-		s = *l;
-		*l = *r;
-		*r = s;
-		l++;
-		r--;
+		t = s[i];
+		s[i] = s[len];
+		s[len--] = t;
+		i++;
 	}
 	_putchar('\n');
 }
