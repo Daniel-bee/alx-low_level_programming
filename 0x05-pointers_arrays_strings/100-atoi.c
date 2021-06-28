@@ -19,5 +19,9 @@ int _atoi(char *s)
 			result = result * 10 + c;
 		i++;
 	}
-	return (sign * result);
+	result *= sign;
+	if (result > 2147483647)
+		return (-2147483648);
+	else
+		return (result);
 }
