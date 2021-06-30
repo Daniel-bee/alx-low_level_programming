@@ -25,14 +25,13 @@ char *_strcat(char *dest, char *src)
 {
 	int c = 0;
 	int len = _strlen(dest);
-	int c2 = len;
 
 	while (src[c] != '\0')
 	{
-		dest[c2] = src[c];
+		dest[len] = src[c];
 		c++;
-		c2++;
+		len++;
 	}
-	dest[c2] = '\0';
+	dest[len] = '\0';
 	return (dest);
 }
