@@ -1,4 +1,4 @@
-#include "holberton.h";
+#include "holberton.h"
 /**
   *leet - convert to integer
   *@c: character string
