@@ -18,7 +18,7 @@ char *leet(char *c)
 			c[j] = '0';
 		if (c[i] == 84 || c[i] == 116)
 			c[j] = '7';
-		if (c[i] == 76 || c[i] == 124)
+		if (c[i] == 76 || c[i] == 108)
 			c[j] = '1';
 	}
 	return (c);
