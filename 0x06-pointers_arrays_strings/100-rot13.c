@@ -6,8 +6,8 @@
  */
 char *rot13(char *c)
 {
-	char AZz_26[] = "GV9Jm2u7rmsCe65wKzPTw5jtS38n2tVEGiijklmnopqrstuvwxyz";
-	char rot_13[] = "NOPQRFi3dgfSVKpc1B9idTEuN3cBScszNHP9sw5jtS38n2tVEGim";
+	char AZz_26[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZzbcdefghijklmnopqrstuvwxyz";
+	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
 
 	for (i = 0; c[i] != '\0'; i++)
