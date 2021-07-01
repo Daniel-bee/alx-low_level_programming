@@ -7,16 +7,15 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int s1_sum = 0, s2_sum = 0, i;
+	int i;
 
 	for (i = 0; s1[i] != '\0'; i++)
-		s1_sum += s1[i];
-	for (i = 0; s2[i] != '\0'; i++)
-		s2_sum += s2[i];
-	if (s1_sum == s2_sum)
-		return (0);
-	else if (s1_sum > s2_sum)
-		return (s1_sum - s2_sum);
-	else
-		return (s1_sum - s2_sum);
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		if (s1[i] == s2[i])
+			return (s1[i] - s2[i]);
+		if (s1[i] > s2[i])
+			return (s1[i] - s2[i]);
+	}
 }
