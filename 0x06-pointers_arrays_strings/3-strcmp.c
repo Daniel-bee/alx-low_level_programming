@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
  * _strcmp - ccompaire two string
  * @s1: first string
