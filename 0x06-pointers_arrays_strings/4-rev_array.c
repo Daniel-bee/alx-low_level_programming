@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * reverse_array - print assay in revers
  * @a: integer array
