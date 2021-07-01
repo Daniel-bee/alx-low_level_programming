@@ -16,10 +16,10 @@ int _strlen(char *s)
 	return (count);
 }
 /**
- * _strcat - appends character string
+ * _strncat - appends character string
  * @dest: character poiter point to char array
  * @src: character poiter point to char array
- * @n: most length 
+ * @n: most length
  * Return: return concatenate char string
  */
 char *_strncat(char *dest, char *src, int n)
