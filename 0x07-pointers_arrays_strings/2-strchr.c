@@ -10,10 +10,6 @@ char *_strchr(char *s, char c)
 {
 	char *tmp = NULL;
 
-	if (s == NULL)
-	{
-		return (NULL);
-	}
 	while (*s)
 	{
 		if (*s == (char) c)
