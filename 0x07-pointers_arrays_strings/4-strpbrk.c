@@ -24,6 +24,12 @@ char *_strchr(char *s, char c)
 		}
 	return (NULL);
 }
+/**
+* _strpbrk - searches a string for any of a set of bytes
+* @s: pointer string
+* @accept: character
+* Return: return char
+*/
 char *_strpbrk(char *s, char *accept)
 {
 	if ((s == NULL) || (accept == NULL))
