@@ -8,7 +8,7 @@
 */
 char *_strchr(char *s, char c)
 {
-	char *tmp = NULL;
+	
 
 	if (s != NULL)
 	{
@@ -17,10 +17,10 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			tmp = s - 1;
+			return (s);
 		}
 		s++;
 	}
 	}
-	return (tmp);
+	return (NULL);
 }
