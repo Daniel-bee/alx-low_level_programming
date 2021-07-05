@@ -8,6 +8,8 @@
 */
 char *_strchr(char *s, char c)
 {
+	char *tmp = NULL;
+
 	if (s == NULL)
 	{
 		return (NULL);
@@ -16,9 +18,9 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == (char) c)
 		{
-			return (s);
+			tmp = s - 1;
 		}
 		s++;
 	}
-	return (NULL);
+	return (tmp);
 }
