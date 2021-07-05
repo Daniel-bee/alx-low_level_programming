@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
  * print_diagsums - diagonals of a square matrix of integers
  * @a: 2D array
