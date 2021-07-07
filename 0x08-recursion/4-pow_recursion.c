@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _pow_recursion - put strings.
- * @s: base
- * *y: exponent
+ * @x: base
+ * @y: exponent
  * Return: x raised to the power of y
  */
 int _pow_recursion(int x, int y)
