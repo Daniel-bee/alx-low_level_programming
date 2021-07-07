@@ -1,25 +1,44 @@
 #include "holberton.h"
 
-/* Solution credit goes to Arthur Damm, cohort 8. */
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: input string
+ * Return: length of s
+ */
+
+int _strlen_recursion(char *s)
+{
+	if (!*s)
+		return (0);
+	return (1 + _strlen_recursion(++s));
+}
 
 /**
- * wildcmp - compares two strings and returns 1 if the strings can be
- * considered identical, otherwise return 0
- * @s1: input string1
- * @s2: input string2
+ * isPalRec - helper function for is_palindrome
+ * @str: input string
+ * @s: start index
+ * @e: end index
  * Return: 1 if true, 0 if false
  */
-int wildcmp(char *s1, char *s2)
+int isPalRec(char str[], int s, int e)
 {
-	if (*s1 == '\0')
-	{
-		if (*s2 != '\0' && *s2 == '*')
-			return (wildcmp(s1, s2 + 1));
-		return (*s2 == '\0');
-	}
-	if (*s2 == '*')
-		return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
-	else if (*s1 == *s2)
-		return (wildcmp(s1 + 1, s2 + 1));
-	return (0);
+	if (s == e)
+		return (1);
+	if (str[s] != str[e])
+		return (0);
+	if (s < e + 1)
+		return (isPalRec(str, s + 1, e - 1));
+	return (1);
+}
+
+/**
+ * is_palindrome - returns 1 if a string is a palindrome and 0 if not
+ * @s: input string
+ * Return: 1 if true, 0 if false
+ */
+int is_palindrome(char *s)
+{
+	int len = _strlen_recursion(s) - 1;
+
+	return (isPalRec(s, 0, len));
 }
