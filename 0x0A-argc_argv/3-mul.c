@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned int pro = 1;
+	int pro = 1;
 
 	if (argc - 1 < 1)
 	{
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 			pro *= atoi(argv[i]);
-	printf("%u\n", pro);
+	printf("%d\n", pro);
 	}
 	return (0);
 }
