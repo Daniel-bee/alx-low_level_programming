@@ -9,7 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int i;
+	unsigned int i;
 	unsigned int pro = 1;
 
 	if (argc - 1 < 1)
