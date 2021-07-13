@@ -22,10 +22,11 @@ int len(char *str)
 */
 char *_strdup(char *str)
 {
-	char *ptr = (char *)malloc(len(str) + 1);
+	int len = len(str) + 1;
+	char *ptr = (char *)malloc(len * sizeof(*str));
 	int i;
 
-	if (len(ptr) == 0 || str == NULL)
+	if (len(str) == 1 || str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
