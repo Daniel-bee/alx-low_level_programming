@@ -13,7 +13,7 @@ int len(char *str)
 	{
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
 /**
 * _strdup - returns a pointer to a newly allocated space in memory
