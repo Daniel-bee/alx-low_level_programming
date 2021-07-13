@@ -23,11 +23,11 @@ int len(char *str)
 char *_strdup(char *str)
 {
 	char *ptr;
-	int sl = len(str), i;
+	int i;
 
 	if (!str)
 		return (NULL);
-	ptr = (char *)malloc(sl * sizeof(*str) + 1);
+	ptr = (char *)malloc(len(str) * sizeof(*str) + 1);
 	if (!ptr)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
