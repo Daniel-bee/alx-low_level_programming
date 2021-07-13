@@ -13,7 +13,7 @@ int len(char *str)
 	{
 		i++;
 	}
-	return (i + 1);
+	return (i);
 }
 /**
 * _strdup - returns a pointer to a newly allocated space in memory
@@ -22,10 +22,10 @@ int len(char *str)
 */
 char *_strdup(char *str)
 {
-	char *ptr = (char *)malloc(len(str) * sizeof(*str));
+	char *ptr = (char *)malloc(len(str) + 1);
 	int i;
 
-	if (ptr == NULL || str == NULL)
+	if (len(ptr) == 0 || str == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
