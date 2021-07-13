@@ -25,9 +25,10 @@ char *_strdup(char *str)
 	int sl = len(str);
 	char *ptr = (char *)malloc(sl * sizeof(*str) + 1);
 	int i;
-
-	if (str == NULL || sl == 0)
+	if (str == NULL)
+	{
 		return (NULL);
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		ptr[i] = str[i];
