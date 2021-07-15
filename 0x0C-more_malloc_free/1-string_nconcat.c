@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-**
+/**
  * string_nconcat - Concatenates two strings using at
  *                  most an inputted number of bytes.
  * @s1: The first string.
