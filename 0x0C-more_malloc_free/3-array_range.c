@@ -24,5 +24,18 @@ if (m == 0)
 for (i = 0; min + i <= max; i++)
 	m[i] = min + i;
 
-return (m);
+return (m);int i, l;
+	int *a;
+
+	if (min > max)
+		return (NULL);
+	l = max - min + 1;
+	a = malloc(sizeof(int) * l);
+	if (a == NULL)
+		return (NULL);
+	for (i = 0; i < l; i++, min++)
+	{
+		a[i] = min;
+	}
+	return (a);
 }
