@@ -1,6 +1,6 @@
+#include <dog.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "dog.h"
 /**
 * print_dog - init struct object.
 * @d: struct type
