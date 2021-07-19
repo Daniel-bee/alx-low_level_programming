@@ -1,18 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
-/**
-* struct dog - create three object
-* @name: string
-* @age : float
-* @owner: char string
-* Description: dog struct create name, age, and owenr objects
-*/
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
 /**
 * init_dog - init struct object.
 * @d: struct type
@@ -22,7 +10,10 @@ struct dog
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	 d->name = name;
-	 d->age = age;
-	 d->owner = owner;
+	if (d != NULL)
+	{
+	 	d->name = name;
+	 	d->age = age;
+	 	d->owner = owner;
+	}
 }
