@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberon.h"
 #include "dog.h"
 /**
 * init_dog - init struct object.
