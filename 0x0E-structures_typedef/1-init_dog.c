@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "holberton.h"
 #include "dog.h"
 /**
 * init_dog - init struct object.
