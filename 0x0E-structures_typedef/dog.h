@@ -5,6 +5,7 @@
 * @name: string
 * @age : float
 * @owner: char string
+*  Description: dog struct create name, age, and owenr objects
 */
 struct dog{						
 	char *name;	
