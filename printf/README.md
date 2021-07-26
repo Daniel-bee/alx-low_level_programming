@@ -1,1 +1,0 @@
-implimentation of print
