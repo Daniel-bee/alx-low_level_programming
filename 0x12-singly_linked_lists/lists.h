@@ -1,6 +1,5 @@
 #ifndef LINKED_L
 #define LINKED_L
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 int _putchear(char c);
