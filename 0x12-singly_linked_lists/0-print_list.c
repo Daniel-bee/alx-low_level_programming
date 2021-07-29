@@ -8,9 +8,7 @@ size_t print_list(const list_t *h)
 {
 	size_t countnode = 0;
 
-	if (h == NULL)
-		return (NULL);
-	while (h != NULL)
+	while (h)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
