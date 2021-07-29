@@ -1,5 +1,8 @@
 #ifndef LINKED_L
 #define LINKED_l
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 int _putchear(char c);
 /**
  * struct list_s - singly linked list
