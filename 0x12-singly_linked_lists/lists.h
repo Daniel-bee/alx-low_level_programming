@@ -1,5 +1,5 @@
 #ifndef LINKED_L
-#define LINKED_l
+#define LINKED_L
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,15 +9,14 @@ int _putchear(char c);
  * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
- *
  * Description: singly linked list node structure
  * for Holberton project
  */
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+	char *str;
+	unsigned int len;
+	struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
