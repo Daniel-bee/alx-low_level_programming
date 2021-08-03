@@ -1,34 +1,33 @@
 #include "lists.h"
+#include "lists.h"
 
 /**
- * add_nodeint_end - adds a node at the end of a linked list
- * @head: pointer to the first element in the list
- * @n: data to insert in the new element
+ * find_listint_loop - finds the loop in a linked list.
+ * @head: pointer to the beginning of the list
  *
- * Return: pointer to the new node, or NULL if it fails
+ * Return: address of the node where the loop starts or NULL if there's no loop
  */
-listint_t *add_nodeint_end(listint_t **head, const int n)
+listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *new;
-	listint_t *temp = *head;
+	listint_t *tortoise, *hare;
 
-	new = malloc(sizeof(listint_t));
-	if (!new)
-		return (NULL);
-
-	new->n = n;
-	new->next = NULL;
-
-	if (*head == NULL)
+	tortoise = hare = head;
+	while (tortoise && hare && hare->next)
 	{
-		*head = new;
-		return (new);
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+		if (tortoise == hare)
+		{
+			tortoise = head;
+			break;
+		}
 	}
-
-	while (temp->next)
-		temp = temp->next;
-
-	temp->next = new;
-
-	return (new);
+	if (!tortoise || !hare || !hare->next)
+		return (NULL);
+	while (tortoise != hare)
+	{
+		tortoise = tortoise->next;
+		hare = hare->next;
+	}
+	return (hare);
 }
