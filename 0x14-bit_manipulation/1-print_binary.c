@@ -5,15 +5,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	int c, k;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	for (c = 31; c >= 0; c--)
-	{
-		k = n >> c;
-		if (k & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	_putchar((n & 1) + '0');
 }
 
