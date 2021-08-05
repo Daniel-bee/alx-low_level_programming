@@ -7,7 +7,7 @@ unsigned int _pow(unsigned int);
  */
 unsigned int  binary_to_uint(const char *b)
 {
-	unsigned int j = 0, len, i, num, l = 0;
+	int j = 0, len, i, num, l = 0;
 
 	if (!b)
 		return (0);
@@ -35,7 +35,7 @@ unsigned int  binary_to_uint(const char *b)
 */
 unsigned int _pow(unsigned int x)
 {
-	unsigned int po = 1;
+	int po = 1;
 
 	if (x == 0)
 		return (1);
