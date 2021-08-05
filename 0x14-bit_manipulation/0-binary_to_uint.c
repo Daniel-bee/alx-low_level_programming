@@ -13,7 +13,7 @@ unsigned int  binary_to_uint(const char *b)
 		return (0);
 	while (b[l])
 	{
-		if ((b[l] < 48 || b[l] > 57))
+		if ((b[l] != '0' && b[l] != '1'))
 			return (0);
 		l++;
 	}
