@@ -22,10 +22,10 @@ unsigned int  binary_to_uint(const char *b)
 	j++;
 
 	len = j - 1;
-	num = ((b[0] - '0') * _pow(len));
+	num = (b[0] - '0') * _pow(len);
 
 	for (i = 1; b[i] != '\0'; i++)
-		num += ((b[i] - '0') * _pow(len - 1));
+		num += ((b[i] - '0') * _pow(--len));
 	return (num);
 }
 /**
