@@ -1,5 +1,5 @@
 #include "main.h"
-unsigned int _pow(unsigned int);
+
 /**
  * binary_to_uint - onverts a binary number to an unsigned int
  * @b: char string
