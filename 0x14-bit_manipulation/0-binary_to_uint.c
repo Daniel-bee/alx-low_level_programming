@@ -7,40 +7,23 @@ unsigned int _pow(unsigned int);
  */
 unsigned int  binary_to_uint(const char *b)
 {
-	unsigned int len, num;
-	int j = 0, i, l = 0;
+	unsigned int num = 0, mult = 1;
+	int len;
 
-	if (!b)
+	if (b == '\0')
 		return (0);
-	while (b[l])
+
+	for (len = 0; b[len];)
+		len++;
+
+	for (len -= 1; len >= 0; len--)
 	{
-		if ((b[l] != '0' && b[l] != '1'))
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		l++;
+
+		num += (b[len] - '0') * mult;
+		mult *= 2;
 	}
 
-	while (b[j])
-	j++;
-
-	len = j - 1;
-	num = (b[0] - '0') * _pow(len);
-
-	for (i = 1; b[i] != '\0'; i++)
-		num += ((b[i] - '0') * _pow(--len));
 	return (num);
-}
-/**
-* _pow - perform power of a number
-* @x: value of a given number
-* Return: power of number
-*/
-unsigned int _pow(unsigned int x)
-{
-	int po = 1;
-
-	if (x == 0)
-		return (1);
-	while (x--)
-		po *= 2;
-	return (po);
 }
