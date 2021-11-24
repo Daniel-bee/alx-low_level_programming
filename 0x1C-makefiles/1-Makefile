@@ -1,8 +1,5 @@
 # Usage:
-# CC 		# varible assign compiler to be used
-# SRC		# assign .c files
-# make -f 1-Makefile	     #  compile binary flee
-# all        #  builds your executable
+# make -f 1-Makefile
 CC = gcc
 SRC = main.c school.c
 all: $(SRC)
