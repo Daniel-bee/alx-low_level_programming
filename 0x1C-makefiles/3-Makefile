@@ -20,4 +20,4 @@ oclean:
 fclean:
 	${RM} *~ ${NAME}
 	${RM} ${OBJ}
-re: all
+re: oclean all
