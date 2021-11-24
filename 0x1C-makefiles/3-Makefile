@@ -5,9 +5,9 @@
 # make re -f 3-Makefile
 
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o) 
-NAME = holberton
+NAME = school
 TOCLEAN = *~ 
 RM = rm -f
 
