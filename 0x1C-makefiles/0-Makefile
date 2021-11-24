@@ -1,5 +1,5 @@
 # Usage:
-# make	     #  compile binary fle
+# make -f 0-Makefile	     #  compile binary fle
 # all        #  builds your executable
 all:
 	gcc school.c main.c -o school 
