@@ -2,4 +2,4 @@
 # make	     #  compile binary fle
 # all        #  builds your executable
 all:
-	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 holberton.c main.c m.h -o school 
+	gcc school.c main.c -o school 
