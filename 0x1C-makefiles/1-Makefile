@@ -2,5 +2,5 @@
 # make -f 1-Makefile
 CC = gcc
 SRC = main.c school.c
-all: $(SRC)
+all: $(CC)
 	$(CC) $(SRC) -o school
