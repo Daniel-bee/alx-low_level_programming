@@ -5,18 +5,20 @@
 # make re -f 3-Makefile
 
 CC = gcc
-SRC = main.c school.c
-OBJ = ${SRC:.c=.o}
-NAME = school
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o) 
+NAME = holberton
+TOCLEAN = *~ 
 RM = rm -f
 
-all: ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
-clean:
-	${RM} *~ ${NAME}
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+fclean: oclean clean
+
 oclean:
-	${RM} ${OBJ}
-fclean:
-        ${RM} *~ ${NAME}
-        ${RM} ${OBJ
+	$(RM) $(OBJ)
+
+clean :
+	$(RM)  $(TOCLEAN) $(NAME)
 re: oclean all
