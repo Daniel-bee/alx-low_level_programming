@@ -1,0 +1,25 @@
+# make all -f 3-Makefile
+# make clean -f 3-Makefile
+# make fclean -f 3-Makefile
+# make oclean -f 3-Makefile
+# make re -f 3-Makefile
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o) 
+NAME = school
+TOCLEAN = *~ 
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all : $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+fclean: oclean clean
+
+oclean:
+	$(RM) $(OBJ)
+
+clean :
+	$(RM)  $(TOCLEAN) $(NAME)
+re: oclean all
