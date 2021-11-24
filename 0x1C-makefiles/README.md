@@ -10,7 +10,7 @@ Now run the file by typing make
 $ make
 echo "Hello World"
 Hello World
-'''
+```
 In the example above, say_hello behaves like a function name, as in any programming language.
 This is called the target. The prerequisites or dependencies follow the target. For the sake of simplicity, 
 we have not defined any prerequisites in this example. The command echo "Hello World" is called the recipe. 
