@@ -16,9 +16,9 @@ all: ${OBJ}
 clean:
 	${RM} *~ ${NAME}
 oclean:
-	${RM} *.o ${OBJ}
+	${RM} ${OBJ}
 fclean:
 	${RM} *~ ${NAME}
-	${RM} *.o ${OBJ}
+	${RM} ${OBJ}
 re: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
