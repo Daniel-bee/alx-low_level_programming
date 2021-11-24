@@ -3,7 +3,7 @@
 # SRC		# assign .c files
 # make -f 1-Makefile	     #  compile binary flee
 # all        #  builds your executable
-CC := gcc
-SRC := school.c main.c
+CC = gcc
+SRC = school.c main.c
 all:
-	$(CC) $(SRC) -o school
+	${CC} ${SRC} -o school
