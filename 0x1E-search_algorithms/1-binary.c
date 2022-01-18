@@ -17,10 +17,10 @@ int binary_search(int *array, size_t size, int value)
 
 	while (start <= end)
 	{
-		mid = start + (end - start) / 2;
-		start = mid;
 		print_array(array, start, end);
 
+		mid = start + (end - start) / 2;
+		start = mid;
 		if (array[mid] == value)
 			return (mid);
 		if (array[mid] < value)
