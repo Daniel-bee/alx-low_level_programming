@@ -38,6 +38,8 @@ int binary_search(int *array, size_t size, int value)
  */
 void print_array(int *list, int start, int end)
 {
+	if (start > end)
+		return;
 	printf("Searching in array: ");
 	while (start < end)
 	{
