@@ -10,9 +10,9 @@ void print_array(int *, int, int);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t start = 0, mid, end = size - 1, i = 0;
+	size_t start = 0, mid, end = size - 1;
 
-	while (start < end)
+	while (start <= end)
 	{
 		mid = (start + end) / 2;
 		print_array(array, start, end);
@@ -23,7 +23,6 @@ int binary_search(int *array, size_t size, int value)
 			start = mid + 1;
 		else
 			end = mid - 1;
-		i++;
 	}
 
 	return (-1);
