@@ -20,6 +20,7 @@ int advanced_binary(int *array, size_t size, int value)
 		{
 			end = mid;
 			mid -= 1;
+			continue;
 			print_array(array, start, end);
 		}
 
