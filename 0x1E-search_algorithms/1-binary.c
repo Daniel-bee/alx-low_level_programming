@@ -1,5 +1,5 @@
 #include "search_algos.h"
-void print_array(int *, int, int);
+
 /**
  *binary_search - searches for a value in a sorted array
  *of integers using the Binary search algorithm
@@ -10,32 +10,35 @@ void print_array(int *, int, int);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t start = 0, mid, end = size - 1;
+	size_t i, left, right;
 
 	if (array == NULL)
 		return (-1);
 
-	while (start <= end)
+	for (left = 0, right = size - 1; right >= left;)
 	{
-		mid = (start + end) / 2;
-		print_array(array, start, end);
+		printf("Searching in array: ");
+		for (i = left; i < right; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 
-		if (array[mid] == value)
-			return (mid);
-		if (array[mid] > value)
-			end = mid - 1;
+		i = left + (right - left) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			right = i - 1;
 		else
-			start = mid + 1;
+			left = i + 1;
 	}
 
-	return (-1);
+	return (-1);	
 }
 /**
  *print_array - print a given array
  *@list: array elelment
  *@start: start index of an array
  *@end: end index of an array
- */
+
 void print_array(int *list, int start, int end)
 {
 	printf("Searching in array: ");
@@ -46,3 +49,4 @@ void print_array(int *list, int start, int end)
 	}
 	printf("%d \n", list[start]);
 }
+*/
