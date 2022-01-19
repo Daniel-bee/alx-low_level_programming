@@ -44,7 +44,7 @@ void print_array(int *list, int start, int end)
 		return;
 	
 	printf("Searching in array: ");
-	while (start < end)
+	while (list && start < end)
 	{
 		printf("%d, ", list[start]);
 		start++;
