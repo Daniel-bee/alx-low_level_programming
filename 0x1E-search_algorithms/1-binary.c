@@ -26,7 +26,7 @@ int binary_search(int *array, size_t size, int value)
 			i++;
 		}
 		printf("%d \n", array[i]);
-	
+
 		if (value == array[mid])
 			return (mid);
 		if (value > array[mid])
