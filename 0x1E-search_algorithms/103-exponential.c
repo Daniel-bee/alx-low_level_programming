@@ -13,7 +13,7 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t index = 0, high;
 
-	if(!array)
+	if (!array)
 		return (-1);
 	if (value == array[0])
 		return (0);
