@@ -25,8 +25,8 @@ int recursive_bsearch(int *array, size_t left, size_t right, int value)
 	if (array[i] == value && (i == left || array[i - 1] != value))
 		return (i);
 	if (array[i] >= value)
-		return (advanced_binary_recursive(array, left, i, value));
-	return (advanced_binary_recursive(array, i + 1, right, value));
+		return (recursive_bsearch(array, left, i, value));
+	return (recursive_bsearch(array, i + 1, right, value));
 }
 /**
  *  advanced_binary - searches for value in array ints with Binary search algo
