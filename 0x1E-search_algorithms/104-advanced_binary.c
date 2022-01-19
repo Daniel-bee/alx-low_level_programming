@@ -1,54 +1,80 @@
 #include "search_algos.h"
-void print_array(int *, int, int);
 /**
- *advanced_binary - searches for a value in a sorted array
- *of integers using the Binary search algorithm
- *@array: pointer to the first element of the array to search in
- *@size: size of an array
- *@value: the value to search for
- *Return: (-1) if not exist or empty array
+ *  recursive_bsearch - helper function using recursion
+ *
+ * @array: ptr to array
+ * @size: number of elements in array
+ * @value: value at index
+ * @index: index of mid prior to recursive call
+ *
+ * Return: first index where value is, otherwise -1 if no value or array NULL
  */
+
+int recursive_bsearch(int *array, size_t size, int value, unsigned int index)
+{
+	unsigned int lo = 0;
+	unsigned int hi = size - 1;
+	unsigned int mid;
+
+	if (size == 0)
+		return (-1);
+
+	printf("Searching in array: ");
+	print_array(array, size);
+
+	if (lo > hi)
+		return (-1);
+	if (size % 2 == 0)
+		mid = (size / 2) - 1;
+	else
+		mid = size / 2;
+	if (array[mid] == value)
+		return (mid + index);
+	else if (array[mid] > value)
+		return (recursive_bsearch(array, mid, value, index));
+	else if (array[mid] < value)
+		return (recursive_bsearch(array + mid + 1, size - mid - 1,
+					  value, index + mid + 1));
+	return (-2);
+}
+
+/**
+ *  advanced_binary - searches for value in array ints with Binary search algo
+ *
+ * @array: ptr to array
+ * @size: number of elements in array
+ * @value: value at index
+ *
+ * Return: first index where value is, otherwise -1 if no value or array NULL
+ */
+
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t start = 0, mid, end = size - 1;
+	unsigned int index = 0;
 
-	while (start <= end)
-	{
-		mid = (start + end) / 2;
-		print_array(array, start, end);
-		if (array[mid - 1] == value)
-		{
-			end = mid;
-			mid -= 1;
-			continue;
-			print_array(array, start, end);
-		}
+	if (!array)
+		return (-1);
 
-		if (array[mid] == value)
-		{
-			return (mid);
-		}
-		if (array[mid] < value)
-			start = mid + 1;
-		else
-			end = mid - 1;
-	}
-
-	return (-1);
+	return (recursive_bsearch(array, size, value, index));
 }
+
 /**
- *print_array - print a given array
- *@list: array elelment
- *@start: start index of an array
- *@end: end index of an array
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
  */
-void print_array(int *list, int start, int end)
+void print_array(int *array, size_t size)
 {
-	printf("Searching in array: ");
-	while (start < end)
+	size_t i;
+
+	i = 0;
+	while (array && i < size)
 	{
-		printf("%d, ", list[start]);
-		start++;
+		if (i > 0)
+			printf(", ");
+		printf("%d", array[i]);
+		++i;
 	}
-	printf("%d \n", list[start]);
+	printf("\n");
 }
