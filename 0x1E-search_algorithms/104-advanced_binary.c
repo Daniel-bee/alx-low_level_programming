@@ -1,15 +1,15 @@
 #include "search_algos.h"
 /**
- *  recursive_bsearch - helper function using recursion
+ *recursive_bsearch - helper function using recursion
  *
  * @array: ptr to array
- * @size: number of elements in array
- * @value: value at index
- * @index: index of mid prior to recursive call
+ * @left: low index
+ * @right: high index
+ * @value: value search for
  *
  * Return: first index where value is, otherwise -1 if no value or array NULL
  */
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
+int recursive_bsearch(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
@@ -42,5 +42,5 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array == NULL || size == 0)
 		return (-1);
 
-	return (advanced_binary_recursive(array, 0, size - 1, value));
+	return (recursive_bsearch(array, 0, size - 1, value));
 }
