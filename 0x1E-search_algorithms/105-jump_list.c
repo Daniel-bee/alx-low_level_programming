@@ -2,6 +2,7 @@
 /**
  *jump_list - searches for a value in a sorted list
  *of integers using the Jump search algorithm
+ *@list: self referential structure
  *@size: size of an array
  *@value: value search for
  *Return: pointer to the first node where value is located
